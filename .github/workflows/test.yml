@@ -48,6 +48,12 @@ jobs:
         run: |
           echo "DATABASE_URL=postgres://user:password@localhost:5432/test_db" > .env
 
+      - name: pytest.iniファイルを作成
+        run: |
+          echo "[pytest]" > pytest.ini
+          echo "DJANGO_SETTINGS_MODULE=config.settings" >> pytest.ini
+          echo "python_files = test_*.py" >> pytest.ini
+
       - name: マイグレーションを実行
         run: |
           source venv/bin/activate
