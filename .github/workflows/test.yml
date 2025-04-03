@@ -49,7 +49,11 @@ jobs:
           echo "DATABASE_URL=postgres://user:password@localhost:5432/test_db" > .env
 
       - name: マイグレーションを実行
-        run: python manage.py migrate
+        run: |
+          source venv/bin/activate
+          python manage.py migrate
 
       - name: Pytest を実行
-        run: pytest -v
+        run: |
+          source venv/bin/activate
+          pytest -v
