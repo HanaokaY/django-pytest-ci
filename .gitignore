@@ -1,0 +1,47 @@
+# Python関連
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+*.pyo
+
+# 環境設定関連
+.env
+*.env
+*.venv
+venv/
+ENV/
+env/
+Pipfile
+Pipfile.lock
+poetry.lock
+
+# IDE・エディタ関連
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*.sublime-workspace
+*.sublime-project
+
+# OS関連
+.DS_Store
+Thumbs.db
+
+# Django関連
+db.sqlite3  # SQLiteのDBファイル
+media/      # メディアファイル (アップロード画像など)
+staticfiles/  # collectstaticで生成される静的ファイル
+*.log  # ログファイル
+
+# Migrationsのキャッシュを無視 (ただし、マイグレーションファイルはコミットする)
+**/migrations/__pycache__/
+
+# GitHub Actions / CI関連
+.coverage
+htmlcov/
+pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
