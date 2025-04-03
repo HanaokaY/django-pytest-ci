@@ -5,4 +5,4 @@ from blog.models import Post
 def test_create_post():
     post = Post.objects.create(title="Test Title", content="Test Content")
     assert post.title == "Test Title"
-    assert post.content == "Test Content"
+    assert post.content == "Test Failure"
